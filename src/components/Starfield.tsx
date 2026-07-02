@@ -27,7 +27,7 @@ export default function Starfield() {
       twinkleDir: number;
     }> = [];
 
-    let shootingStars: Array<{
+    const shootingStars: Array<{
       x: number;
       y: number;
       length: number;

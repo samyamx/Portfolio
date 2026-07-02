@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useRef, MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
@@ -16,13 +17,13 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: "Aetheria Space Dashboard",
+    title: "Pet Vet",
     category: "Frontend",
-    desc: "Interactive telemetry dashboard using NASA API. Displays real-time Martian weather logs, near-Earth orbit trajectories, and high-resolution celestial image indexing.",
+    desc: "Pet Vet is a comprehensive online platform for pet healthcare management. It serves as a centralized hub for pet owners to maintain detailed health records, schedule veterinary appointments, track vaccinations, and access essential pet care resources. The website features a modern, user-friendly interface with intuitive navigation and secure data management, providing a seamless experience for managing your pet's well-being.",
     techs: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "🪐",
+    github: "https://github.com/samyamx/RecipeNest",
+    live: "https://recipenest.vercel.app",
+    image: "/public/a.png",
   },
   {
     title: "Chronos Task Planner",
@@ -192,11 +193,10 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full font-ui text-xs uppercase tracking-wider font-semibold border transition-all duration-300 ${
-                  isActive
-                    ? "bg-accent-purple border-accent-purple text-bg-primary shadow-[0_0_15px_rgba(138,124,255,0.3)]"
-                    : "bg-bg-secondary border-white/5 text-fg-muted hover:border-white/10 hover:text-fg-primary"
-                }`}
+                className={`px-4 py-2 rounded-full font-ui text-xs uppercase tracking-wider font-semibold border transition-all duration-300 ${isActive
+                  ? "bg-accent-purple border-accent-purple text-bg-primary shadow-[0_0_15px_rgba(138,124,255,0.3)]"
+                  : "bg-bg-secondary border-white/5 text-fg-muted hover:border-white/10 hover:text-fg-primary"
+                  }`}
               >
                 {cat}
               </button>

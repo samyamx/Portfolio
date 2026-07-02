@@ -15,7 +15,7 @@ const interestTags = [
 const stats = [
   { label: "Projects Completed", value: 6, suffix: "+" },
   { label: "Years Experience", value: 0.5, suffix: "+" },
-  { label: "Technologies Mastered", value: 9, suffix: "+" },
+  { label: "Technologies Mastered", value: 12, suffix: "+" },
   { label: "Certifications Earned", value: 3, suffix: "" },
 ];
 
@@ -112,7 +112,7 @@ export default function About() {
 
               {/* Bottom sketch message */}
               <div className="text-center font-ui text-xs text-fg-muted/70 tracking-wide mt-2">
-                "Sketching ideas in space, compiling them on Earth."
+                &quot;Sketching ideas in space, compiling them on Earth.&quot;
               </div>
             </motion.div>
           </div>
@@ -124,7 +124,7 @@ export default function About() {
             </h3>
 
             <p className="font-body text-base text-fg-muted leading-relaxed">
-              Hello! I'm Samyam, a software engineering student and frontend developer deeply passionate about creating performant, beautiful, and accessible web experiences. I love combining raw engineering details with fluid animations to build interfaces that feel premium.
+              Hello! I&apos;m Samyam, a software engineering student and frontend developer deeply passionate about creating performant, beautiful, and accessible web experiences. I love combining raw engineering details with fluid animations to build interfaces that feel premium.
             </p>
 
             <p className="font-body text-base text-fg-muted leading-relaxed">

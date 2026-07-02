@@ -92,12 +92,12 @@ export default function Hero() {
 
           <div className="space-y-2">
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-fg-primary leading-tight">
-              Hello, I'm{" "}
+              Hello, I&apos;m{" "}
               <motion.span
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="inline-block text-glow-purple text-accent-purple font-serif"
+                className="inline-flex flex-row text-glow-purple text-accent-purple font-serif"
               >
                 {nameLetters.map((char, index) => (
                   <motion.span key={index} variants={letterVariants} className="inline-block">
@@ -139,7 +139,7 @@ export default function Hero() {
               Explore My Work
             </a>
             <a
-              href="/resume.pdf"
+              href="/My_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full font-ui text-xs tracking-widest uppercase font-semibold border border-fg-muted/30 hover:border-accent-blue hover:text-accent-blue transition-all duration-300 hover:scale-[1.03] bg-bg-secondary/40"

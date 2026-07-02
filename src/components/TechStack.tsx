@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HelpCircle } from "lucide-react";
 
 interface Tech {
   name: string;
@@ -14,18 +13,18 @@ interface Tech {
 }
 
 const technologies: Tech[] = [
-  { name: "HTML5", category: "Frontend", percent: 95, years: 3, desc: "Semantic page structures, SEO fundamentals, and clean layout scaffolding.", color: "#8A7CFF" },
-  { name: "CSS3", category: "Frontend", percent: 90, years: 3, desc: "Complex layouts, responsive media queries, and premium micro-animations.", color: "#5CAEFF" },
-  { name: "JavaScript", category: "Frontend/Backend", percent: 90, years: 3, desc: "Modern ES6+ specifications, asynchronous patterns, and DOM mechanics.", color: "#8A7CFF" },
-  { name: "React", category: "Frontend", percent: 88, years: 2, desc: "State coordination, custom hooks, and high-fidelity rendering architecture.", color: "#5CAEFF" },
-  { name: "Next.js", category: "Frontend", percent: 85, years: 2, desc: "App Router layouts, Server Components, API routes, and optimized builds.", color: "#8A7CFF" },
-  { name: "Node.js", category: "Backend", percent: 80, years: 2, desc: "Server execution environment, module design, and package management.", color: "#5CAEFF" },
-  { name: "Express", category: "Backend", percent: 82, years: 2, desc: "RESTful endpoints design, middleware execution, and API routing.", color: "#8A7CFF" },
-  { name: "MongoDB", category: "Database", percent: 75, years: 2, desc: "NoSQL data schemas, queries execution, and collection relationships.", color: "#5CAEFF" },
-  { name: "Git", category: "DevOps", percent: 85, years: 3, desc: "Branching workflows, version control safety, and interactive rebasing.", color: "#8A7CFF" },
-  { name: "GitHub", category: "DevOps", percent: 88, years: 3, desc: "Collaborative pull requests, CI/CD actions setup, and issue tracking.", color: "#5CAEFF" },
-  { name: "Figma", category: "Design", percent: 78, years: 2, desc: "Component design systems, wireframing, and vector design translation.", color: "#8A7CFF" },
-  { name: "Tailwind", category: "Frontend", percent: 92, years: 3, desc: "Utility-first design tokens, custom configs, and rapid responsive styles.", color: "#5CAEFF" },
+  { name: "HTML5", category: "Frontend", percent: 95, years: 1, desc: "Semantic page structures, SEO fundamentals, and clean layout scaffolding.", color: "#8A7CFF" },
+  { name: "CSS3", category: "Frontend", percent: 90, years: 1, desc: "Complex layouts, responsive media queries, and premium micro-animations.", color: "#5CAEFF" },
+  { name: "JavaScript", category: "Frontend/Backend", percent: 90, years: 1, desc: "Modern ES6+ specifications, asynchronous patterns, and DOM mechanics.", color: "#8A7CFF" },
+  { name: "React", category: "Frontend", percent: 88, years: 0.5, desc: "State coordination, custom hooks, and high-fidelity rendering architecture.", color: "#5CAEFF" },
+  { name: "Next.js", category: "Frontend", percent: 85, years: 0.5, desc: "App Router layouts, Server Components, API routes, and optimized builds.", color: "#8A7CFF" },
+  { name: "Node.js", category: "Backend", percent: 80, years: 0.5, desc: "Server execution environment, module design, and package management.", color: "#5CAEFF" },
+  { name: "Express", category: "Backend", percent: 82, years: 0.5, desc: "RESTful endpoints design, middleware execution, and API routing.", color: "#8A7CFF" },
+  { name: "MongoDB", category: "Database", percent: 75, years: 0.5, desc: "NoSQL data schemas, queries execution, and collection relationships.", color: "#5CAEFF" },
+  { name: "Git", category: "DevOps", percent: 85, years: 0.5, desc: "Branching workflows, version control safety, and interactive rebasing.", color: "#8A7CFF" },
+  { name: "GitHub", category: "DevOps", percent: 88, years: 0.5, desc: "Collaborative pull requests, CI/CD actions setup, and issue tracking.", color: "#5CAEFF" },
+  { name: "Figma", category: "Design", percent: 78, years: 0.5, desc: "Component design systems, wireframing, and vector design translation.", color: "#8A7CFF" },
+  { name: "Tailwind", category: "Frontend", percent: 92, years: 0.5, desc: "Utility-first design tokens, custom configs, and rapid responsive styles.", color: "#5CAEFF" },
 ];
 
 export default function TechStack() {
@@ -110,11 +109,10 @@ export default function TechStack() {
                   }}
                   onMouseEnter={() => selectTechnology(tech, idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`absolute w-14 h-14 rounded-full flex items-center justify-center font-ui text-[10px] font-semibold border transition-all duration-300 z-30 bg-bg-secondary ${
-                    isHovered
+                  className={`absolute w-14 h-14 rounded-full flex items-center justify-center font-ui text-[10px] font-semibold border transition-all duration-300 z-30 bg-bg-secondary ${isHovered
                       ? "border-accent-purple text-accent-purple scale-110 shadow-[0_0_15px_rgba(138,124,255,0.35)]"
                       : "border-white/10 text-fg-muted hover:border-accent-blue/50"
-                  }`}
+                    }`}
                   aria-label={`View details for ${tech.name}`}
                 >
                   {tech.name}
@@ -163,17 +161,16 @@ export default function TechStack() {
           <div className="flex flex-col gap-6">
             {/* Selector Grid */}
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-              {technologies.map((tech, idx) => {
+              {technologies.map((tech) => {
                 const isSelected = selectedTech.name === tech.name;
                 return (
                   <button
                     key={tech.name}
                     onClick={() => setSelectedTech(tech)}
-                    className={`py-3 px-2 rounded-xl text-center font-ui text-xs border transition-all duration-200 ${
-                      isSelected
+                    className={`py-3 px-2 rounded-xl text-center font-ui text-xs border transition-all duration-200 ${isSelected
                         ? "bg-accent-purple/10 border-accent-purple text-accent-purple"
                         : "bg-bg-secondary border-white/5 text-fg-muted"
-                    }`}
+                      }`}
                   >
                     {tech.name}
                   </button>

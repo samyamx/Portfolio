@@ -47,9 +47,10 @@ export default function Contact() {
         const data = await response.json();
         throw new Error(data.message || "Failed to submit message.");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus("error");
-      setErrorMessage(err.message || "Something went wrong. Please try again.");
+      const errMsg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setErrorMessage(errMsg);
     }
   };
 
@@ -72,7 +73,7 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-8 flex flex-col justify-center">
             <div className="space-y-3">
               <h3 className="font-ui text-xs uppercase tracking-widest text-accent-blue font-bold">
-                Let's Collaborate
+                Let&apos;s Collaborate
               </h3>
               <p className="font-body text-base text-fg-muted leading-relaxed">
                 Whether you have an interesting project, a job opening, or just want to chat about engineering and design, feel free to drop me a message!

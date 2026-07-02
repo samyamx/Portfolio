@@ -57,9 +57,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <nav
-        className={`w-full max-w-5xl rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "glass-capsule shadow-lg py-2.5" : "bg-transparent border-transparent"
-        }`}
+        className={`w-full max-w-5xl rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 ${scrolled ? "glass-capsule shadow-lg py-2.5" : "bg-transparent border-transparent"
+          }`}
       >
         {/* Logo */}
         <a
@@ -77,9 +76,8 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-ui text-sm uppercase tracking-widest relative px-3 py-1.5 transition-colors duration-300 ${
-                  isActive ? "text-accent-purple" : "text-fg-muted hover:text-fg-primary"
-                }`}
+                className={`font-ui text-sm uppercase tracking-widest relative px-3 py-1.5 transition-colors duration-300 ${isActive ? "text-accent-purple" : "text-fg-muted hover:text-fg-primary"
+                  }`}
               >
                 {link.name}
                 {isActive && (
@@ -97,7 +95,7 @@ export default function Navbar() {
         {/* Social media icons (Desktop) */}
         <div className="hidden md:flex items-center gap-4 text-fg-muted">
           <a
-            href="https://github.com"
+            href="https://github.com/samyamx"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
@@ -106,7 +104,7 @@ export default function Navbar() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/samyam-shrestha-940b413a3/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
@@ -115,7 +113,7 @@ export default function Navbar() {
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/explore.with.yam/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram Profile"
@@ -151,11 +149,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-ui text-base uppercase tracking-widest py-2 px-4 rounded-xl transition-colors duration-200 ${
-                    activeSection === link.href.substring(1)
+                  className={`font-ui text-base uppercase tracking-widest py-2 px-4 rounded-xl transition-colors duration-200 ${activeSection === link.href.substring(1)
                       ? "bg-accent-purple/10 text-accent-purple"
                       : "text-fg-muted hover:bg-white/5 hover:text-fg-primary"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </a>
