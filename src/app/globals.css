@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #05070D;
+  --foreground: #F5F7FF;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05070D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A7CFF;
+}
+
+/* Glassmorphism Styles */
+.glass-capsule {
+  background: rgba(14, 19, 34, 0.65);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(138, 124, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(14, 19, 34, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 247, 255, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(138, 124, 255, 0.3);
+  box-shadow: 0 0 20px rgba(138, 124, 255, 0.1);
+}
+
+/* Text glow */
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(138, 124, 255, 0.4);
+}
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(92, 174, 255, 0.4);
+}
+
+/* Sketchy hand-drawn border effect using SVG border mask or custom clip */
+.sketchy-border {
+  position: relative;
+}
+.sketchy-border::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 2px solid rgba(245, 247, 255, 0.45);
+  border-radius: 12px 6px 14px 8px / 6px 12px 8px 14px;
+  pointer-events: none;
+}
+
+/* Notebook paper texture style */
+.notebook-paper {
+  background-color: #0E1322;
+  background-image: 
+    linear-gradient(rgba(138, 124, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 174, 255, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 1.5px solid rgba(245, 247, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Constellation connection lines */
+.constellation-svg {
+  stroke-dasharray: 4, 4;
+  animation: dash 30s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Mask utility for nebula glows */
+.nebula-glow {
+  background: radial-gradient(circle, rgba(138, 124, 255, 0.12) 0%, rgba(92, 174, 255, 0.04) 50%, transparent 100%);
+  filter: blur(40px);
+}
+
