@@ -95,8 +95,8 @@ export default function Contact() {
                 </div>
                 <div className="font-ui text-sm">
                   <div className="text-fg-muted text-[10px] uppercase tracking-widest">Email</div>
-                  <a href="mailto:contact@samyam.dev" className="text-fg-primary hover:text-accent-purple transition-colors font-medium">
-                    contact@samyam.dev
+                  <a href="mailto:samyam00349@gmail.com" className="text-fg-primary hover:text-accent-purple transition-colors font-medium">
+                    samyam00349@gmail.com
                   </a>
                 </div>
               </div>
@@ -107,8 +107,8 @@ export default function Contact() {
                 </div>
                 <div className="font-ui text-sm">
                   <div className="text-fg-muted text-[10px] uppercase tracking-widest">Phone</div>
-                  <a href="tel:+9779800000000" className="text-fg-primary hover:text-accent-blue transition-colors font-medium">
-                    +977-9800000000
+                  <a href="tel:+9779863483004" className="text-fg-primary hover:text-accent-blue transition-colors font-medium">
+                    +977-9863483004
                   </a>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
                 <div className="font-ui text-sm">
                   <div className="text-fg-muted text-[10px] uppercase tracking-widest">Location</div>
-                  <span className="text-fg-primary font-medium">Kathmandu, Nepal</span>
+                  <span className="text-fg-primary font-medium">Lalitpur, Nepal</span>
                 </div>
               </div>
             </div>

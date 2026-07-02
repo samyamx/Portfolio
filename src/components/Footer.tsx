@@ -20,7 +20,7 @@ export default function Footer() {
 
         {/* Center column */}
         <div className="font-ui text-xs text-fg-muted text-center">
-          Made with <span className="text-accent-purple">❤️</span>, Next.js, and Tailwind CSS.
+          <span className="text-accent-purple"></span>
         </div>
 
         {/* Right column / Back to top */}

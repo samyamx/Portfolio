@@ -168,7 +168,7 @@ export default function Hero() {
             </a>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/samyamx"
                 target="_blank"
                 className="hover:text-accent-purple transition-colors"
                 aria-label="GitHub"
@@ -176,7 +176,7 @@ export default function Hero() {
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/samyam-shrestha-940b413a3/"
                 target="_blank"
                 className="hover:text-accent-blue transition-colors"
                 aria-label="LinkedIn"
