@@ -363,7 +363,7 @@ export default function About() {
           {/* Right Column - Biography / Info */}
           <div className="lg:col-span-7 space-y-6">
             <h3 className="font-ui text-lg uppercase tracking-wider text-accent-blue font-semibold">
-              Designing the Frontend, Engineering the Core
+              NAVIGATING THE DIGITAL UNIVERSE
             </h3>
 
             <p className="font-body text-base text-fg-muted leading-relaxed">
