@@ -252,42 +252,42 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: "Pet Vet",
+    title: "Park Fasto",
     category: "Frontend",
     desc: "Pet Vet is a comprehensive online platform for pet healthcare management. It serves as a centralized hub for pet owners to maintain detailed health records, schedule veterinary appointments, track vaccinations, and access essential pet care resources. The website features a modern, user-friendly interface with intuitive navigation and secure data management, providing a seamless experience for managing your pet's well-being.",
     techs: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Recharts"],
-    github: "https://github.com/samyamx/RecipeNest",
-    live: "https://recipenest.vercel.app",
+    github: "https://github.com/samyamx/ParkFasto__Frontend",
+    live: "https://park-fasto-frontend.vercel.app/",
     image: "/images/a.png",
   },
 
   {
-    title: "Chronos Task Planner",
+    title: "ResQ Nepal",
     category: "Full Stack",
     desc: "Linear.app-inspired project tracking board featuring ultra-fast keyboard command menus, socket synchronization, and robust subtask hierarchy trees.",
     techs: ["React", "Express", "MongoDB", "Tailwind CSS", "Socket.io"],
     github: "https://github.com",
-    live: "https://example.com",
+    live: "https://res-q-nepal-18kt.vercel.app/",
     image: "/images/rqn.png",
   },
   {
-    title: "Lunaris UI Design System",
+    title: "Recipe Nest",
     category: "UI Design",
     desc: "Cosmic-themed web UI kit incorporating hand-drawn pencil outline treatments with modern glassmorphic accents. Documented thoroughly inside active Storybook previews.",
     techs: ["Figma", "React", "Tailwind CSS", "Storybook", "NPM"],
-    github: "https://github.com",
+    github: "https://github.com/samyamx/RecipeNest ",
     live: "https://example.com",
-    image: "🎨",
+    image: "/images/rn.png",
   },
-  {
-    title: "Helix Code Playpen",
-    category: "Frontend",
-    desc: "Interactive playground with real-time AST node highlighting, live code lint analysis, and custom dark mode themes configured dynamically.",
-    techs: ["React", "TypeScript", "WebAssembly", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "🧬",
-  },
+  // {
+  //   title: "Helix Code Playpen",
+  //   category: "Frontend",
+  //   desc: "Interactive playground with real-time AST node highlighting, live code lint analysis, and custom dark mode themes configured dynamically.",
+  //   techs: ["React", "TypeScript", "WebAssembly", "Tailwind CSS"],
+  //   github: "https://github.com",
+  //   live: "https://example.com",
+  //   image: "🧬",
+  // },
 ];
 
 const categories = ["All", "Frontend", "Full Stack", "UI Design"];

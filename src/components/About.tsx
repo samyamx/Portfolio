@@ -1,175 +1,3 @@
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
-
-// const interestTags = [
-//   "Hackathons",
-//   "Problem Solving",
-//   "Open Source",
-//   "Creative Design",
-//   "Nature",
-//   "Continuous Learning",
-// ];
-
-// const stats = [
-//   { label: "Projects Completed", value: 6, suffix: "+" },
-//   { label: "Years Experience", value: 0.5, suffix: "+" },
-//   { label: "Technologies Mastered", value: 12, suffix: "+" },
-//   { label: "Certifications Earned", value: 3, suffix: "" },
-// ];
-
-// function CountUp({ value, suffix }: { value: number; suffix: string }) {
-//   const [count, setCount] = useState(0);
-
-//   useEffect(() => {
-//     const prefersReducedMotion = window.matchMedia(
-//       "(prefers-reduced-motion: reduce)"
-//     ).matches;
-
-//     if (prefersReducedMotion) {
-//       setCount(value);
-//       return;
-//     }
-
-//     let start = 0;
-//     const duration = 1500;
-//     const increment = value / (duration / 16); // ~60fps
-
-//     const timer = setInterval(() => {
-//       start += increment;
-//       if (start >= value) {
-//         clearInterval(timer);
-//         setCount(value);
-//       } else {
-//         setCount(Math.floor(start));
-//       }
-//     }, 16);
-
-//     return () => clearInterval(timer);
-//   }, [value]);
-
-//   return (
-//     <span>
-//       {count}
-//       {suffix}
-//     </span>
-//   );
-// }
-
-// export default function About() {
-//   return (
-//     <section id="about" className="py-24 relative z-10 overflow-hidden">
-//       <div className="container mx-auto px-4 max-w-6xl">
-//         {/* Title */}
-//         <div className="text-center mb-16">
-//           <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-fg-primary mb-3">
-//             About Myself
-//           </h2>
-//           <div className="w-16 h-1 bg-gradient-to-r from-accent-purple to-accent-blue mx-auto rounded-full" />
-//         </div>
-
-//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-//           {/* Left Column - Sketch Portrait Card */}
-//           <div className="lg:col-span-5 flex justify-center">
-//             <motion.div
-//               initial={{ opacity: 0, x: -30 }}
-//               whileInView={{ opacity: 1, x: 0 }}
-//               viewport={{ once: true, margin: "-100px" }}
-//               transition={{ duration: 0.6 }}
-//               className="w-full max-w-[340px] aspect-[4/5] notebook-paper p-6 relative flex flex-col justify-between shadow-2xl"
-//             >
-//               {/* Notebook Paper Details */}
-//               <div className="absolute top-0 bottom-0 left-6 w-[1.5px] bg-red-900/15" />
-//               <div className="absolute top-6 right-6 font-ui text-[10px] tracking-widest text-fg-muted/40 uppercase">
-//                 CR-0205 // SM
-//               </div>
-
-//               {/* Central sketchy portrait frame */}
-//               <div className="flex-1 border-2 border-dashed border-fg-muted/30 rounded-lg m-2 flex items-center justify-center relative overflow-hidden bg-bg-primary/40">
-//                 <svg
-//                   viewBox="0 0 100 100"
-//                   className="w-24 h-24 text-fg-muted/40"
-//                   fill="none"
-//                   stroke="currentColor"
-//                   strokeWidth="1"
-//                 >
-//                   {/* Sketchy face outline */}
-//                   <path d="M 35,45 Q 38,40 50,40 Q 62,40 65,45 Q 67,52 64,60 Q 60,72 50,72 Q 40,72 36,60 Q 33,52 35,45 Z" />
-//                   {/* hair */}
-//                   <path d="M 33,45 C 38,25 62,25 67,45" />
-//                   {/* eyes & mouth */}
-//                   <circle cx="43" cy="50" r="1.5" fill="currentColor" />
-//                   <circle cx="57" cy="50" r="1.5" fill="currentColor" />
-//                   <path d="M 46,62 Q 50,65 54,62" />
-//                   {/* constellation links over avatar */}
-//                   <path d="M 10,20 L 30,30 L 25,50 M 90,80 L 70,60" strokeDasharray="2,2" stroke="rgba(138, 124, 255, 0.2)" />
-//                 </svg>
-//                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-ui text-[10px] uppercase text-accent-purple tracking-widest">
-//                   [ SAMYAM_AVATAR ]
-//                 </div>
-//               </div>
-
-//               {/* Bottom sketch message */}
-//               <div className="text-center font-ui text-xs text-fg-muted/70 tracking-wide mt-2">
-//                 &quot;Sketching ideas in space, compiling them on Earth.&quot;
-//               </div>
-//             </motion.div>
-//           </div>
-
-//           {/* Right Column - Biography / Info */}
-//           <div className="lg:col-span-7 space-y-6">
-//             <h3 className="font-ui text-lg uppercase tracking-wider text-accent-blue font-semibold">
-//               Designing the Frontend, Engineering the Core
-//             </h3>
-
-//             <p className="font-body text-base text-fg-muted leading-relaxed">
-//               Hello! I&apos;m Samyam, a software engineering student and frontend developer deeply passionate about creating performant, beautiful, and accessible web experiences. I love combining raw engineering details with fluid animations to build interfaces that feel premium.
-//             </p>
-
-//             <p className="font-body text-base text-fg-muted leading-relaxed">
-//               Currently, I focus on building applications using modern frameworks like Next.js and TypeScript, styled with Tailwind CSS, and optimized for maximum responsiveness. I actively participate in hackathons, collaborate on open-source projects, and constantly challenge myself with complex problem solving.
-//             </p>
-
-//             {/* Interest Tags */}
-//             <div className="space-y-3">
-//               <h4 className="font-ui text-xs uppercase tracking-widest text-fg-primary font-bold">
-//                 My Core Interests
-//               </h4>
-//               <div className="flex flex-wrap gap-2.5">
-//                 {interestTags.map((tag, idx) => (
-//                   <span
-//                     key={idx}
-//                     className="font-ui text-xs px-3 py-1.5 rounded-md bg-bg-secondary border border-white/5 text-fg-muted hover:border-accent-purple/35 hover:text-fg-primary transition-all duration-300 cursor-default"
-//                   >
-//                     #{tag}
-//                   </span>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Statistics */}
-//             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-white/10">
-//               {stats.map((stat, idx) => (
-//                 <div key={idx} className="space-y-1">
-//                   <div className="font-heading text-3xl font-bold text-accent-purple text-glow-purple">
-//                     <CountUp value={stat.value} suffix={stat.suffix} />
-//                   </div>
-//                   <div className="font-ui text-[10px] uppercase tracking-widest text-fg-muted leading-tight">
-//                     {stat.label}
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -178,10 +6,10 @@ import { motion } from "framer-motion";
 const interestTags = [
   "Hackathons",
   "Problem Solving",
-  "Open Source",
   "Creative Design",
-  "Nature",
-  "Continuous Learning",
+  "Crafting",
+  "Space and Science",
+  "Volunteering",
 ];
 
 const stats = [
@@ -325,7 +153,7 @@ export default function About() {
                     key={idx}
                     className="font-ui text-xs px-3 py-1.5 rounded-md bg-bg-secondary border border-white/5 text-fg-muted hover:border-accent-purple/35 hover:text-fg-primary transition-all duration-300 cursor-default"
                   >
-                    #{tag}
+                    {tag}
                   </span>
                 ))}
               </div>
