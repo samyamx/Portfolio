@@ -84,7 +84,7 @@ export default function Contact() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 w-fit">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="font-ui text-[11px] font-semibold text-emerald-400 tracking-wider uppercase">
-                Available for Freelance & Roles
+                Available for Hackathon
               </span>
             </div>
 

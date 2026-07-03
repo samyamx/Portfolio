@@ -63,9 +63,9 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="font-heading text-2xl font-bold tracking-wider text-fg-primary text-glow-purple"
+          className="font-heading text-1xl font-bold tracking-wider text-fg-primary text-glow-purple"
         >
-          Samyam
+          Samyam Shrestha
         </a>
 
         {/* Desktop nav links */}
@@ -150,8 +150,8 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`font-ui text-base uppercase tracking-widest py-2 px-4 rounded-xl transition-colors duration-200 ${activeSection === link.href.substring(1)
-                      ? "bg-accent-purple/10 text-accent-purple"
-                      : "text-fg-muted hover:bg-white/5 hover:text-fg-primary"
+                    ? "bg-accent-purple/10 text-accent-purple"
+                    : "text-fg-muted hover:bg-white/5 hover:text-fg-primary"
                     }`}
                 >
                   {link.name}

@@ -266,7 +266,7 @@ const projectsData: Project[] = [
     category: "Full Stack",
     desc: "Linear.app-inspired project tracking board featuring ultra-fast keyboard command menus, socket synchronization, and robust subtask hierarchy trees.",
     techs: ["React", "Express", "MongoDB", "Tailwind CSS", "Socket.io"],
-    github: "https://github.com",
+    github: "https://github.com/samyamx/Aawaz",
     live: "https://res-q-nepal-18kt.vercel.app/",
     image: "/images/rqn.png",
   },
@@ -276,7 +276,7 @@ const projectsData: Project[] = [
     desc: "Cosmic-themed web UI kit incorporating hand-drawn pencil outline treatments with modern glassmorphic accents. Documented thoroughly inside active Storybook previews.",
     techs: ["Figma", "React", "Tailwind CSS", "Storybook", "NPM"],
     github: "https://github.com/samyamx/RecipeNest ",
-    live: "https://example.com",
+    live: "https://recipe-nest-taupe.vercel.app/",
     image: "/images/rn.png",
   },
   // {
