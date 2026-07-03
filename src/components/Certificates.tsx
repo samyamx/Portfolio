@@ -20,18 +20,18 @@ const certificates: Certificate[] = [
     icon: "🌐",
   },
   {
-    title: "Software Engineering Principles",
-    org: "freeCodeCamp",
-    date: "Sept 2025",
-    link: "https://example.com",
+    title: "Nepal-US Hackathon 2026",
+    org: "Nepali Leaders Network",
+    date: "Jan 2026",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7444236416156422145/",
     icon: "💻",
   },
   {
-    title: "Google UX Design Professional Certificate",
-    org: "Google",
-    date: "May 2025",
-    link: "https://example.com",
-    icon: "🎨",
+    title: "Claude 101",
+    org: "ANTHROPC",
+    date: "May 2026",
+    link: "https://verify.skilljar.com/c/95noqdfnjgb7",
+    icon: "🤖",
   },
 ];
 
