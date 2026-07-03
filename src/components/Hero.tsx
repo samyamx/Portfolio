@@ -92,7 +92,7 @@ export default function Hero() {
 
           <div className="space-y-2">
             <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-fg-primary leading-tight">
-              Hello, I'm{" "}
+              I&apos;m{" "}
               <motion.span
                 variants={containerVariants}
                 initial="hidden"
